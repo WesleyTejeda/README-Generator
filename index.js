@@ -1,7 +1,7 @@
 var fs = require("fs");
 var inquirer = require("inquirer");
 var fileName = "./generated_files/newREADME.md";
-var data = require("./utils/generateMarkdown.js");
+
 
 const questions = [
     "What is your name?",
@@ -15,7 +15,84 @@ const questions = [
     "Tests",
     "How to reach you in case of questions"
 ];
+function init() {
+    promptUser();
+}
 
+init();
+function promptUser(){
+    inquirer.prompt([
+        {
+            type: "input",
+            message: questions[0],
+            name: "userName"
+        },
+        {
+            type: "input",
+            message: questions[1],
+            name: "userEmail"
+        },
+        {
+            type: "input",
+            message: questions[2],
+            name: "projecTitle"
+        },
+        {
+            type: "input",
+            message: questions[3],
+            name: "description"
+        },
+        {
+            type: "input",
+            message: questions[4],
+            name: "contents"
+        },
+        {
+            type: "input",
+            message: questions[5],
+            name: "usage"
+        },
+        {
+            type: "input",
+            message: questions[6],
+            name: "licenses"
+        },
+        {
+            type: "input",
+            message: questions[7],
+            name: "contributing"
+        },
+        {
+            type: "input",
+            message: questions[8],
+            name: "tests"
+        },
+        {
+            type: "input",
+            message: questions[9],
+            name: "questions"
+        }
+    ]).then(function(userResp){
+        console.log(userResp);
+        // module.exports = data;
+        var responses =
+        {
+          title: userResp.projecTitle,
+          description: userResp.description,
+          table: userResp.contents,
+          install: "None yet",
+          usage: userResp.usage,
+          license: userResp.licenses,
+          contribute: userResp.contributing,
+          tests: userResp.tests,
+          questions: userResp.questions,
+        }
+        console.log(responses);
+        module.exports = responses;
+        var data = require("./utils/generateMarkdown.js");
+        writeToFile(fileName,data);
+    })
+  };
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(err){
         if(err)
@@ -24,9 +101,3 @@ function writeToFile(fileName, data) {
         console.log("Success, check the GeneratedReadMe folder to view your README.md");
     });
 }
-
-function init() {
-    writeToFile(fileName,data);
-}
-
-init();

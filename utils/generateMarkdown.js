@@ -1,3 +1,4 @@
+var userData = require("../index.js");
 function generateMarkdown(data) {
   return `
 # ${data.title}
@@ -20,18 +21,5 @@ function generateMarkdown(data) {
 
 `;
 }
-
-var userData = 
-  {
-    title: "",
-    description: "",
-    table: "",
-    install: "",
-    usage: "",
-    license: "",
-    contribute: "",
-    tests: "",
-    questions: "",
-  }
 
 module.exports = generateMarkdown(userData);
