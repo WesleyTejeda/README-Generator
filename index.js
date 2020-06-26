@@ -1,4 +1,7 @@
 var fs = require("fs");
+var inquirer = require("inquirer");
+var fileName = "./generated_files/newREADME.md";
+var data = require("./utils/generateMarkdown.js");
 
 const questions = [
     "What is your name?",
@@ -14,7 +17,7 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, utf-8, function(err){
+    fs.writeFile(fileName, data, function(err){
         if(err)
             throw err;
 
@@ -23,7 +26,7 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
-    writeToFile("")
+    writeToFile(fileName,data);
 }
 
 init();

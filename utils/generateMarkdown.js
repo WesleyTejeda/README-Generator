@@ -21,33 +21,17 @@ function generateMarkdown(data) {
 `;
 }
 
-var userData = [
+var userData = 
   {
-    title: ""
-  },
-  {
-    description: ""
-  },
-  {
-    table: ""
-  },
-  {
-    install: ""
-  },
-  {
-    license: ""
-  },
-  {
-    contribute: ""
-  },
-  {
-    tests: ""
-  },
-  {
-    questions: ""
-  },
-  {
-
-  }];
+    title: "",
+    description: "",
+    table: "",
+    install: "",
+    usage: "",
+    license: "",
+    contribute: "",
+    tests: "",
+    questions: "",
+  }
 
 module.exports = generateMarkdown(userData);
