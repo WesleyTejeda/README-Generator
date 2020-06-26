@@ -14,11 +14,16 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, utf-8, function(err){
+        if(err)
+            throw err;
 
+        console.log("Success, check the GeneratedReadMe folder to view your README.md");
+    });
 }
 
 function init() {
-
+    writeToFile("")
 }
 
 init();
