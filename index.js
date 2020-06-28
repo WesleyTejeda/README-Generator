@@ -86,11 +86,12 @@ function promptUser(){
           contribute: userResp.contributing,
           tests: userResp.tests,
           questions: userResp.questions,
+          name: userResp.userName,
+          email: userResp.userEmail
         }
         console.log(responses);
-        module.exports = responses;
-        var data = require("./utils/generateMarkdown.js");
-        writeToFile(fileName,data);
+        var generateMarkdown = require("./utils/generateMarkdown.js");
+        writeToFile(fileName,generateMarkdown(responses));
     })
   };
 function writeToFile(fileName, data) {

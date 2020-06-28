@@ -1,33 +1,34 @@
-var userData = require("../index.js");
 function generateMarkdown(data) {
   return `
 # ${data.title}
 
-## Description\n
+## Description
 ${data.description}
 
-## Table of Contents\n
+## Table of Contents
 ${data.table}
 
-## Installation\n
+## Installation
 ${data.install}
 
-## Usage\n
+## Usage
 ${data.usage}
 
-## License\n
+## License
 ${data.license}
 
-## Contributing\n
+## Contributing
 ${data.contribute}
 
-## Tests\n
+## Tests
 ${data.tests}
 
-## Questions\n
+## Questions
 ${data.questions}
 
+  ${data.name}
+  ${data.email}
 `;
 }
 
-module.exports = generateMarkdown(userData);
+module.exports = generateMarkdown;
