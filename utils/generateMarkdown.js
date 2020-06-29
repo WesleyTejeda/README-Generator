@@ -1,5 +1,6 @@
 function generateMarkdown(data) {
   return `
+${data.license}
 # ${data.title}
 
 ## Description

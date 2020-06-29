@@ -1,7 +1,7 @@
 var fs = require("fs");
 var inquirer = require("inquirer");
+const Choices = require("inquirer/lib/objects/choices");
 var fileName = "./generated_files/newREADME.md";
-
 
 const questions = [
     "What is your name?",
@@ -53,9 +53,16 @@ function promptUser(){
             name: "usage"
         },
         {
-            type: "input",
+            type: "checkbox",
+            status: () => {return choices},
             message: questions[6],
-            name: "licenses"
+            name: "licenses",
+            choices: [
+                {name: "MIT", value : "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)", checked: false},
+                {name: "Apache 2.0", value : "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)", checked: false},
+                {name: "ODbL", value : "[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)", checked: false},
+                {name: "None", value : "", checked: false},
+            ]
         },
         {
             type: "input",
@@ -74,8 +81,7 @@ function promptUser(){
         }
     ]).then(function(userResp){
         console.log(userResp);
-        // module.exports = data;
-        var responses =
+        responses =
         {
           title: userResp.projecTitle,
           description: userResp.description,
@@ -89,7 +95,6 @@ function promptUser(){
           name: userResp.userName,
           email: userResp.userEmail
         }
-        console.log(responses);
         var generateMarkdown = require("./utils/generateMarkdown.js");
         writeToFile(fileName,generateMarkdown(responses));
     })
