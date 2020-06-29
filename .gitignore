@@ -1,4 +1,4 @@
 node_modules
 .env
 .DS_Store
-generated_files
+/generated_files/newREADME.md

@@ -12,8 +12,9 @@ const questions = [
     "Describe how to use your app.",
     "What license would you like for this app?",
     "Give your message for future contributors.",
-    "Tests",
-    "How to reach you in case of questions"
+    "Has your code passed any tests?",
+    "How to reach you in case of questions",
+    "Are there any installation details you would like to include?"
 ];
 function init() {
     promptUser();
@@ -46,6 +47,11 @@ function promptUser(){
             type: "input",
             message: questions[4],
             name: "contents"
+        },
+        {
+            type: "input",
+            message: questions[10],
+            name: "install"
         },
         {
             type: "input",
@@ -86,7 +92,7 @@ function promptUser(){
           title: userResp.projecTitle,
           description: userResp.description,
           table: userResp.contents,
-          install: "None yet",
+          install: userResp.install,
           usage: userResp.usage,
           license: userResp.licenses,
           contribute: userResp.contributing,
