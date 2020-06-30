@@ -4,7 +4,7 @@ by ```Wesley Tejeda```<br>
 
 Repository Link: https://github.com/wesleytejeda/README-Generator<br>
 ## Demo
-Please watch the video to see how this app works.
+Please click the thumbnail and watch the video to see how this app works.<br>
 [![Watch the demo](https://img.youtube.com/vi/TZjVhpT8n3I/hqdefault.jpg)](https://youtu.be/TZjVhpT8n3I)
 ## Description
 In this repository I've created a readme.md generator based on user input using node js.
