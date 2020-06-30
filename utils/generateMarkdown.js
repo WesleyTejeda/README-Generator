@@ -25,8 +25,8 @@ ${data.tests}
 
 ## Questions
 ${data.questions}\n
-  ${data.name}\n
-  ${data.email}
+  Github username: ${data.name}\n
+  Email address: ${data.email}
 `;
 }
 

@@ -1,8 +1,8 @@
 
 # README-Generator
 by ```Wesley Tejeda```<br>
-Deployed link: !["Link to deployed page"](https://wesleytejeda.github.io/README-Generator)<br>
-Repository Link: !["Link to repository"](https://github.com/wesleytejeda/README-Generator)<br>
+
+Repository Link: https://github.com/wesleytejeda/README-Generator<br>
 ## Description
 In this repository I've created a readme.md generator based on user input using node js.
 
@@ -20,5 +20,5 @@ Pull requests are welcome. For suggestions, please open an issue to elaborate ch
 ## Questions
 You can reach me at the email below for questions or contact me directly on github.
 
-  Wesley Tejeda
+  Wesley Tejeda<br>
   wesley.tejeda95@gmail.com
