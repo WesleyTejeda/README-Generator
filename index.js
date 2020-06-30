@@ -1,7 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Choices = require("inquirer/lib/objects/choices");
-var fileName = "./generatedREADME.md";
+var fileName = "./generated_files/newREADME.md";
 
 const questions = [
     "What is your github username?",
