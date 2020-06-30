@@ -3,11 +3,14 @@
 by ```Wesley Tejeda```<br>
 
 Repository Link: https://github.com/wesleytejeda/README-Generator<br>
+## Demo
+Please click the thumbnail and watch the video to see how this app works.<br>
+[![Watch the demo](https://img.youtube.com/vi/TZjVhpT8n3I/hqdefault.jpg)](https://youtu.be/TZjVhpT8n3I)
 ## Description
 In this repository I've created a readme.md generator based on user input using node js.
 
 ## Installation
-Install command: npm i
+Install command: npm init
 ## Usage
 After installing using  the instructions above, use the command ```node index.js``` in order to execute the generator.
 
