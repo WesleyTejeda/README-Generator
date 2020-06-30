@@ -24,9 +24,8 @@ ${data.contribute}
 ${data.tests}
 
 ## Questions
-${data.questions}
-
-  ${data.name}
+${data.questions}\n
+  ${data.name}\n
   ${data.email}
 `;
 }

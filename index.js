@@ -1,10 +1,10 @@
-var fs = require("fs");
-var inquirer = require("inquirer");
+const fs = require("fs");
+const inquirer = require("inquirer");
 const Choices = require("inquirer/lib/objects/choices");
 var fileName = "./generated_files/newREADME.md";
 
 const questions = [
-    "What is your name?",
+    "What is your github username?",
     "What is your email?",
     "What is your project title?",
     "Give a description for your project.",
@@ -60,7 +60,7 @@ function promptUser(){
         },
         {
             type: "checkbox",
-            status: () => {return choices},
+            status: () => choices,
             message: questions[6],
             name: "licenses",
             choices: [
@@ -101,7 +101,7 @@ function promptUser(){
           name: userResp.userName,
           email: userResp.userEmail
         }
-        var generateMarkdown = require("./utils/generateMarkdown.js");
+        let generateMarkdown = require("./utils/generateMarkdown.js");
         writeToFile(fileName,generateMarkdown(responses));
     })
   };
